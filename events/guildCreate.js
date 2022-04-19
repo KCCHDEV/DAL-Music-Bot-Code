@@ -20,7 +20,7 @@ client.on("guildCreate", async (guild) => {
     }
   } else {
     await channel.send(
-      `I don't have \`USE_APPLICATION_COMMANDS\` so i can't create slash commands in your server , if you want to use me then give me \`USE_APPLICATION_COMMANDS\` and reinvite`
+      `ไม่สามารถสร้าง \`USE_APPLICATION_COMMANDS\` โปรดลอง reinvite`
     );
     setTimeout(() => {
       guild.leave().catch((e) => {});

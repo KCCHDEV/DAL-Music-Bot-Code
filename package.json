@@ -8,6 +8,7 @@
     "@distube/soundcloud": "^1.1.0",
     "@distube/spotify": "^1.2.1",
     "@distube/yt-dlp": "^1.0.2",
+    "@distube/ytdl-core": "^4.11.3",
     "abab": "^2.0.5",
     "acorn": "^8.7.0",
     "acorn-globals": "^6.0.0",

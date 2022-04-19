@@ -75,6 +75,9 @@ module.exports = new Command({
         ]);
         let embed = new MessageEmbed()
           .setColor(ee.color)
+          .setImage(
+            `https://cdn.discordapp.com/attachments/950770133972971558/965274631634288801/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg`
+          )
           .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
           .addField(
             `**Commands **`,
@@ -98,7 +101,7 @@ module.exports = new Command({
             collector.on(`collect`, async (b) => {
               try {
                 if (b.isButton()) {
-                  await b.deferUpdate().catch((e) => {});
+                  await b.deferUpdate().catch((e) => { });
                   //page forward
                   if (b.customId == `1`) {
                     //b.reply(`***Swapping a PAGE FORWARD***, *please wait 2 Seconds for the next Input*`, true)
@@ -127,19 +130,19 @@ module.exports = new Command({
                       embeds: [embeds[currentPage]],
                       components: [buttonRow, raw],
                     })
-                    .catch((e) => {});
-                  b.deferUpdate().catch((e) => {});
+                    .catch((e) => { });
+                  b.deferUpdate().catch((e) => { });
                 }
                 if (b.isSelectMenu()) {
                   if (b.customId === `help-menu`) {
-                    await b.deferUpdate().catch((e) => {});
+                    await b.deferUpdate().catch((e) => { });
                     let directory = b.values[0];
                     let aa = allotherembeds_eachcategory(true);
                     mainmsg
                       .edit({
                         embeds: [aa[directory]],
                       })
-                      .catch((e) => {});
+                      .catch((e) => { });
                   }
                 }
               } catch (e) {
@@ -238,9 +241,8 @@ module.exports = new Command({
 
           return embeds.map((embed, index) => {
             return embed.setColor(ee.color).setFooter({
-              text: `Page ${index + 1} / ${
-                embeds.length
-              }\nหากต้องการรายละเอียดคำสั่ง, พิมพ์: ${prefix}help [CMD NAME]`,
+              text: `Page ${index + 1} / ${embeds.length
+                }\nหากต้องการรายละเอียดคำสั่ง, พิมพ์: ${prefix}help [CMD NAME]`,
               iconURL: client.user.displayAvatarURL({ dynamic: true }),
             });
           });
@@ -290,12 +292,11 @@ module.exports = new Command({
               {
                 name: `${emoji.backup} Sub Commands`,
                 value: derescommand.options
-                  ? `\`\`\`\n ${
-                      derescommand.options
-                        .filter((cmd) => cmd.type === "SUB_COMMAND")
-                        .map((cmd) => `${cmd.name}`)
-                        .join(" , ") || `ไม่มี SUB COMMAND`
-                    } \`\`\``
+                  ? `\`\`\`\n ${derescommand.options
+                    .filter((cmd) => cmd.type === "SUB_COMMAND")
+                    .map((cmd) => `${cmd.name}`)
+                    .join(" , ") || `ไม่มี SUB COMMAND`
+                  } \`\`\``
                   : "```\n ไม่มี SUB COMMAND```",
               },
             ])

@@ -33,6 +33,8 @@ module.exports = async (client) => {
           embeds: [
             new MessageEmbed()
               .setColor(ee.color)
+              .setImage( `https://cdn.discordapp.com/attachments/950770133972971558/965274631634288801/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg`
+          )
               .setThumbnail(song.thumbnail)
               .setDescription(`>>> ** [\`${song.name}\`](${song.url}) **`)
               .addFields([
@@ -253,6 +255,9 @@ module.exports = async (client) => {
         embeds: [
           new MessageEmbed()
             .setColor(ee.color)
+            .setImage(
+            `https://cdn.discordapp.com/attachments/950770133972971558/965274631634288801/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg`
+          )
             .setDescription(
               ` การเล่นจบแล้ว \n ถ้าชอบระบบการเล่นเข้าไปให้คะแนนได้ที่ [Top.gg](https://top.gg/bot/915021697688666123)`
             )

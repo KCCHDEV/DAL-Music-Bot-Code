@@ -28,7 +28,7 @@ client.on("messageCreate", async (message) => {
           new MessageEmbed()
             .setColor(ee.color)
             .setDescription(
-              `** ❌ You don't Have ${command.userPermissions} To Run Command.. **`
+              `** ❌ คุณไม่มี ${command.userPermissions} เพื่อใช้คำสั่งนี้.. **`
             ),
         ],
       });
@@ -38,7 +38,7 @@ client.on("messageCreate", async (message) => {
           new MessageEmbed()
             .setColor(ee.color)
             .setDescription(
-              `** ❌ I don't Have ${command.botPermissions} To Run Command.. **`
+              `** ❌ คุณไม่มี ${command.userPermissions} เพื่อใช้คำสั่งนี้.. **`
             ),
         ],
       });

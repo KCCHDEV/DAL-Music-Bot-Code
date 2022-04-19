@@ -8,7 +8,7 @@ const { duration } = require(`../../handlers/functions`);
 module.exports = new Command({
   // options
   name: `botinfo`,
-  description: `get info of bot`,
+  description: `ข้อมูล`,
   userPermissions: [`SEND_MESSAGES`],
   botPermissions: [`SEND_MESSAGES`],
   category: `Information`,

@@ -15,7 +15,7 @@ client.on("interactionCreate", async (interaction) => {
       .catch((e) => {});
     let prefix = "/";
     const cmd = client.commands.get(interaction.commandName);
-    if (!cmd) return interaction.followUp({ content: "An error has occured " });
+    if (!cmd) return interaction.followUp({ content: " มีหนูหลุดเข้าไปใน Server กำลังแก้ไข " });
 
     const args = [];
 
@@ -35,19 +35,19 @@ client.on("interactionCreate", async (interaction) => {
       if (!interaction.member.permissions.has(cmd.userPermissions || [])) {
         return client.embed(
           interaction,
-          `You Don't Have \`${cmd.userPermissions}\` Permission to Use \`${cmd.name}\` Command!!`
+          `คุณไม่มี \`${cmd.userPermissions}\` Permission เพื่อใช้ \`${cmd.name}\` `
         );
       } else if (
         !interaction.guild.me.permissions.has(cmd.botPermissions || [])
       ) {
         return client.embed(
           interaction,
-          `I Don't Have \`${cmd.botPermissions}\` Permission to Use \`${cmd.name}\` Command!!`
+          `คุณไม่มี \`${cmd.botPermissions}\` Permission เพื่อใช้ \`${cmd.name}\` `
         );
       } else if (cooldown(interaction, cmd)) {
         return client.embed(
           interaction,
-          ` You are On Cooldown , wait \`${cooldown(
+          ` Cooldown , รอ \`${cooldown(
             interaction,
             cmd
           ).toFixed()}\` Seconds`

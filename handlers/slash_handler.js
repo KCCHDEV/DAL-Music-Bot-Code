@@ -137,16 +137,16 @@ module.exports = async (client) => {
   // embed
   client.queueEmed = new MessageEmbed()
     .setColor("RANDOM")
-    .setTitle(`\`0\` เพลงในคิว`);
+    .setTitle(`\`0\` ไม่มีการเล่น`);
 
   client.playembed = new MessageEmbed()
     .setColor("RANDOM")
     .setTitle(`เข้าห้องเสียงแล้วเล่นเพลงได้เลย`)
     .setImage(
-      `https://cdn.discordapp.com/attachments/950770133972971558/963400240000565298/b39c0c466fa2e880bcf8b904305041aa.gif`
+      `https://cdn.discordapp.com/attachments/950770133972971558/965274631634288801/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg`
     )
     .setDescription(
-      `>>> **รองรับ Youtube , Spotify , Soundclound **`
+      `>>> **รองรับ Youtube , Spotify , Soundclound ** Powner by Luna Hosting`
     );
 
   // function

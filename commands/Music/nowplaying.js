@@ -33,7 +33,7 @@ module.exports = new Command({
             .setColor(ee.color)
             .setThumbnail(song.thumbnail)
             .setAuthor({
-              name: `Now Playing`,
+              name: `การเล่นในตอนนี้`,
               iconURL: song.url,
               url: song.url,
             })
@@ -42,27 +42,27 @@ module.exports = new Command({
             )
             .addFields([
               {
-                name: `** ${emoji.time} Duration **`,
+                name: `** ${emoji.time} ระยะเวลา **`,
                 value: `>>> ${song.formattedDuration}`,
                 inline: true,
               },
               {
-                name: `** ${emoji.song_by} Requested By **`,
+                name: `** ${emoji.song_by} สั่งงานโดย **`,
                 value: `>>> ${song.user}`,
                 inline: true,
               },
               {
-                name: `** ${emoji.bot} Author **`,
+                name: `** ${emoji.bot} เพลงโดย **`,
                 value: `>>> ${song.uploader.name}`,
                 inline: true,
               },
               {
-                name: `** ${emoji.raise_volume} Volume: **`,
+                name: `** ${emoji.raise_volume} ระดับเสียง: **`,
                 value: `>>> ${queue.volume}%`,
                 inline: true,
               },
               {
-                name: `** ⬇️ Download: **`,
+                name: `** ⬇️ โหลดเพลง: **`,
                 value: `>>> [Download Now](${song.streamURL})`,
                 inline: true,
               },

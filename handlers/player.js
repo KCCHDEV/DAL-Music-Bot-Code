@@ -14,7 +14,7 @@ let player = new Distube(client, {
   emitAddListWhenCreatingQueue: true,
   emitAddSongWhenCreatingQueue: true,
   emitNewSongOnly: false,
-  emptyCooldown: 5,
+  emptyCooldown: 10,
   leaveOnEmpty: true,
   leaveOnFinish: true,
   leaveOnStop: true,

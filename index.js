@@ -35,17 +35,17 @@ module.exports = client;
 const config = require("./settings/config.json");
 
 // // for replit
-// const express = require("express");
-// const app = express();
-// const port = 3000;
+ const express = require("express");
+ const app = express();
+ const port = 3000;
 
-// app.get("/", (req, res) => {
-//   res.send("Hello World!");
-// });
+ app.get("/", (req, res) => {
+   res.send("เอาลิ้งค์เว็บไปใส่ใน https://uptimerobot.com/ ด้วย!");
+ });
 
-// app.listen(port, () => {
-//   console.log(` app listening on port ${port}`);
-// });
+ app.listen(port, () => {
+   console.log(` app listening on port ${port}`);
+ });
 
 // Global Variables
 client.events = new Collection();
@@ -94,15 +94,3 @@ process.on("multipleResolves", (type, promise, reason) => {
    console.log(type, promise, reason);
 });
 
-
-const express = require('express');
-
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send('เอาลิ้งค์เว็บไปใส่ใน https://uptimerobot.com/ ด้วย')
-});
-
-app.listen(3000, () => {
-  console.log('อ่านหาพ่อง');
-});

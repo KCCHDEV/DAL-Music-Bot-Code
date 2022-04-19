@@ -17,7 +17,7 @@ module.exports = new Command({
   run: async ({ client, interaction, args, prefix }) => {
     // Code
     interaction.followUp(
-      `\`\`\`yml\n Uptime :- ${duration(client.uptime)
+      `\`\`\`yml\n Uptime :  ${duration(client.uptime)
         .map((t) => `${t}`)
         .join(" , ")} \`\`\``
     );
