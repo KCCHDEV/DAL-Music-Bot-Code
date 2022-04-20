@@ -1,6 +1,8 @@
-#Update April 19/2022
+# Update April 19/2022
 Update Command เล็กๆน้อยๆ
-เปลี่ยนการออนไลน์จาก Playing เป็น STREAMING
+ Update AntiCrash
+  Console สวยขึ้น
+    หากเกินบัครันคำสั่งไม่หยุดให้ลบ Color module
 
 
 # DAL-Music-Bot-Code
