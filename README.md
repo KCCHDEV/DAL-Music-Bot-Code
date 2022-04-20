@@ -1,3 +1,8 @@
+#Update April 19/2022
+Update Command เล็กๆน้อยๆ
+เปลี่ยนการออนไลน์จาก Playing เป็น STREAMING
+
+
 # DAL-Music-Bot-Code
 New Code DAL Music is not all my code
 Coded By Kabir Singh | Tech Boy Development | KCCH Dev
