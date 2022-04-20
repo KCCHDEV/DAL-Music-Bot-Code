@@ -17,7 +17,7 @@ module.exports = (client) => {
           client.events.set(pull.name, pull);
         }
       }
-      console.log(`${file}  Events Loaded Successfullly`);
+      console.log(`${file}  Events Loaded Successfullly`.brightGreen);
     });
   } catch (e) {
     console.log(e.message);

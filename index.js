@@ -1,3 +1,4 @@
+var colors = require('colors');
 const { Client, Collection, Intents } = require("discord.js");
 const fs = require("fs");
 const client = new Client({
@@ -44,7 +45,7 @@ const config = require("./settings/config.json");
  });
 
  app.listen(port, () => {
-   console.log(` app listening on port ${port}`);
+   console.log(` app listening on port ${port}`.brightGreen);
  });
 
 // Global Variables
@@ -60,8 +61,11 @@ client.categories = fs.readdirSync("./commands/");
 
 // Initializing the project
 //Loading files, with the client variable like Command Handler, Event Handler, ...
-["event_handler", "slash_handler", "Player_Handler", "command_handler"].forEach((handler) => {
-  require(`./handlers/${handler}`)(client);
+["event_handler", "slash_handler", "Player_Handler", "command_handler",]
+  .forEach((handler) => {
+  require(`./handlers/${handler}`)
+    (client)
+    ;
 });
 
 // // database connection
@@ -77,20 +81,36 @@ client.music = new Enmap({
 
 client.login(process.env.TOKEN || config.token);
 
+//------------- AntiCrash -------------
+
 process.on("unhandledRejection", (reason, p) => {
-  console.log(" [Error_Handling] :: Unhandled Rejection/Catch");
-  console.log(reason, p);
+  console.log(" [AntiCrash] :: Unhandled Rejection/Catch".bgYellow);
+  //console.log(reason, p);
 });
 process.on("uncaughtException", (err, origin) => {
-  console.log(" [Error_Handling] :: Uncaught Exception/Catch");
-  console.log(err, origin);
+  console.log(" [AntiCrash] :: Uncaught Exception/Catch".bgYellow);
+  //console.log(err, origin);
 });
 process.on("uncaughtExceptionMonitor", (err, origin) => {
-  console.log(" [Error_Handling] :: Uncaught Exception/Catch (MONITOR)");
-  console.log(err, origin);
+  console.log(" [AntiCrash] :: Uncaught Exception/Catch (MONITOR)".bgYellow);
+  //console.log(err, origin);
 });
 process.on("multipleResolves", (type, promise, reason) => {
-   console.log(" [Error_Handling] :: Multiple Resolves");
-   console.log(type, promise, reason);
+   console.log(" [AntiCrash] :: Multiple Resolves".bgGreen);
+   //console.log(type, promise, reason);
 });
+
+console.log(`AntiCrash Run in background console msg off`.bgBlue);
+//---------------------- CR -----------------------------
+console.log(`------- CR -------`.rainbow);
+console.log(`1 - Code By Kabir Singh `);
+console.log(`2 - Tech Boy Development (Edit 1)`);
+console.log(`3 - KCCH Dev (Edit 2)`);
+console.log(`4 -`);
+console.log(`5 -`);
+console.log(`6 -`);
+console.log(`7 -`);
+console.log(`8 -`);
+console.log(`------------------`.rainbow);
+
 

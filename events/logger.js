@@ -16,7 +16,7 @@ const client = require("../index");
    console.log(
      `[${String(new Date())
        .split(" ", 5)
-       .join(" ")}]Shard #${id} Disconnected`
+       .join(" ")}]Shard #${id} Disconnected`.red
    );
  });
 
@@ -24,7 +24,7 @@ const client = require("../index");
    console.log(
      `[${String(new Date())
        .split(" ", 5)
-       .join(" ")}]Shard #${id} Errored`
+       .join(" ")}]Shard #${id} Errored`.red
    );
  });
 
@@ -32,7 +32,7 @@ const client = require("../index");
    console.log(
      `[${String(new Date())
        .split(" ", 5)
-       .join(" ")}]Shard #${id} Ready`
+       .join(" ")}]Shard #${id} Ready`.bgGreen
    );
  });
 
@@ -40,7 +40,7 @@ const client = require("../index");
    console.log(
      `[${String(new Date())
        .split(" ", 5)
-       .join(" ")}]Shard #${id} Reconnecting`
+       .join(" ")}]Shard #${id} Reconnecting`.bgYellow
    );
  });
 
@@ -48,7 +48,7 @@ const client = require("../index");
    console.log(
      `[${String(new Date())
        .split(" ", 5)
-       .join(" ")}]Shard #${id} Resumed`
+       .join(" ")}]Shard #${id} Resumed`.bgBrightGreen
    );
  });
 

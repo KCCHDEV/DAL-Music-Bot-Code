@@ -4,7 +4,9 @@ const config = require(`../../settings/config.json`);
 const { MessageEmbed, version } = require(`discord.js`);
 const emoji = require(`../../settings/emoji.json`);
 const { duration } = require(`../../handlers/functions`);
-
+let cpuStat = require("cpu-stat");
+let os = require("os");
+                  
 module.exports = new Command({
   // options
   name: `botinfo`,
@@ -16,6 +18,8 @@ module.exports = new Command({
   // command start
   run: async ({ client, interaction, args, prefix }) => {
     // Code
+    
+                  
     interaction.followUp({
       embeds: [
         new MessageEmbed()
@@ -42,6 +46,11 @@ module.exports = new Command({
             {
               name: `🎛️ Servers`,
               value: `>>> \`${client.guilds.cache.size} Servers\``,
+              inline: true,
+            },
+            {
+              name: `💾 Ram Use`,
+              value: `>>> \`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}/ ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB\``,
               inline: true,
             },
             {

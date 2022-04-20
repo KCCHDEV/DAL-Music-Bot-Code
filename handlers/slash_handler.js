@@ -52,7 +52,7 @@ module.exports = async (client) => {
       }
     });
 
-    console.log(` Loaded ${client.commands.size} commands `);
+    console.log(` Loaded ${client.commands.size} commands`.brightGreen);
   } catch (e) {
     console.log(e);
   }

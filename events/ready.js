@@ -3,9 +3,9 @@ const player = require("../handlers/player");
 const { databasing } = require("../handlers/functions");
 
 client.on("ready", async () => {
-  console.log(`> ${client.user.username} Online <`);
+  console.log(`> ${client.user.username} Online <`.bgGreen);
   client.user.setActivity({
-    name: `/help | ${client.guilds.cache.size} Servers`,
+    name: `Update Time | ${client.guilds.cache.size} Servers`,
     type: "STREAMING",
     url: 'https://www.twitch.tv/kubomusic',
   });

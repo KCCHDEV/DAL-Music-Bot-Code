@@ -17,14 +17,14 @@ module.exports = (client) => {
         if (pull.name) {
           client.mcommands.set(pull.name, pull);
         } else {
-          console.log(`${cmds} Command is not Ready`);
+          console.log(`${cmds} Command is not Ready`.brightRed);
           continue;
         }
         if (pull.aliases && Array.isArray(pull.aliases))
           pull.aliases.forEach((alias) => client.aliases.set(alias, pull.name));
       }
     });
-    console.log(`${client.mcommands.size} Message Commands lOADED`);
+    console.log(`${client.mcommands.size} Message Commands lOADED`.brightGreen);
   } catch (e) {
     console.log(e);
   }
